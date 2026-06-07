@@ -12,7 +12,7 @@ export default function Nav() {
       borderBottom: '1px solid var(--border)',
     }}>
       <span style={{ fontFamily: 'var(--font-serif)', fontSize: '18px', fontWeight: 400, color: 'var(--ink)' }}>
-        N<span style={{ color: 'var(--gold)' }}>.</span>
+        <span style={{ color: 'var(--ink)' }}>Lakey</span><span style={{ color: 'var(--gold)' }}>.</span>
       </span>
 
       <ul style={{ display: 'flex', gap: '2.5rem', listStyle: 'none' }}>

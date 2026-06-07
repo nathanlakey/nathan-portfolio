@@ -4,7 +4,7 @@ const services = [
   {
     num: '01',
     name: 'Website or landing page',
-    desc: 'A polished Next.js site that converts visitors into customers. Built to load fast, rank well, and look like it cost twice as much.',
+    desc: 'A polished Next.js site that converts visitors into customers, built to load fast, rank well, and look like it costs twice as much.',
     includes: [
       'Up to 6 pages, Tailwind CSS, fully responsive',
       'Contact form, analytics, on-page SEO',

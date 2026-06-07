@@ -29,12 +29,12 @@ const services = [
   },
   {
     num: '03',
-    name: 'AI integration',
-    desc: 'Add meaningful AI to your product — content generators, intelligent chatbots, document processors, or custom automation workflows.',
+    name: 'Automation & AI',
+    desc: 'Add smart automation to your business — tools that write, respond, organize, and work in the background so you don\'t have to.',
     includes: [
-      'Claude or OpenAI API, prompt engineering included',
-      'Works with your existing site or built from scratch',
-      'The highest-leverage upgrade for most businesses',
+      'Chatbots that answer customer questions 24/7',
+      'Auto-generated content, reports, and marketing copy',
+      'Document processing, lead qualification, and more',
     ],
     price: '$1,500 –\n$3,500',
     priceNote: 'flat rate',

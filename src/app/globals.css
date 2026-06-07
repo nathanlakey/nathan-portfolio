@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg:          #f7f4ef;
+  --bg2:         #f0ece4;
+  --bg3:         #e8e2d8;
+  --ink:         #1a1814;
+  --ink2:        #3d3a34;
+  --muted:       #8c8680;
+  --gold:        #b8962e;
+  --gold-dim:    rgba(184,150,46,0.12);
+  --gold-border: rgba(184,150,46,0.3);
+  --border:      rgba(26,24,20,0.1);
+  --font-serif:  var(--font-serif);
+  --font-sans:   var(--font-sans);
+  --font-mono:   var(--font-mono);
+  --r:           5px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── Reveal animation ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Hero entrance animations ── */
+.anim-1 { opacity: 0; animation: fadeUp 0.5s ease forwards 0.15s; }
+.anim-2 { opacity: 0; animation: fadeUp 0.6s ease forwards 0.3s;  }
+.anim-3 { opacity: 0; animation: fadeUp 0.6s ease forwards 0.5s;  }

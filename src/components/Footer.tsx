@@ -11,7 +11,7 @@ export default function Footer() {
         fontFamily: 'var(--font-mono)', fontSize: '11px',
         color: 'rgba(247,244,239,0.25)',
       }}>
-        <span>© {new Date().getFullYear()} Nathan — Fort Worth, TX</span>
+        <span>© {new Date().getFullYear()} Lakey Studio — Dallas, TX</span>
         <span>Next.js · Supabase · Vercel</span>
       </div>
     </footer>

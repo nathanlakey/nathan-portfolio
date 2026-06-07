@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Nathan — Web Development & AI',
+  title: 'Lakey Studio — Web Development & AI',
   description:
-    'I build web applications and AI-powered tools that grow businesses. Next.js, Supabase, custom AI integrations. Based in Fort Worth, TX.',
+    'Lakey Studio builds web applications and AI-powered tools that grow businesses. Next.js, Supabase, custom AI integrations. Based in Fort Worth, TX.',
   openGraph: {
-    title: 'Nathan — Web Development & AI',
+    title: 'Lakey Studio — Web Development & AI',
     description:
       'Web apps and AI tools for businesses that take their digital presence seriously.',
     type: 'website',

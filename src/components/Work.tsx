@@ -3,7 +3,7 @@
 const projects = [
   {
     id: 'landman',
-    category: 'Land Auctions · Fort Worth, TX',
+    category: 'Land Auctions · Dallas, TX',
     name: 'Landman Auctions',
     desc: 'Authority site and lead-generation platform for a World Champion Auctioneer. Admin dashboard, real-time listings, auction countdown, and seller consultation flow.',
     stack: ['Next.js 14', 'Supabase', 'Clerk', 'Resend', 'Vercel'],

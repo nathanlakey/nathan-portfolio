@@ -85,7 +85,7 @@ export default function Hero() {
               {[
                 'Full-stack: Next.js, Supabase, Tailwind, Vercel',
                 'AI integrations: Claude API, OpenAI, automation workflows',
-                'Based in Fort Worth, TX — available anywhere',
+                'Based in Dallas, TX — available anywhere',
               ].map((cred) => (
                 <div key={cred} style={{
                   display: 'flex', alignItems: 'center', gap: '10px',

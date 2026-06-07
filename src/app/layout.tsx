@@ -4,7 +4,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Lakey Studio — Web Development & AI',
   description:
-    'Lakey Studio builds web applications and AI-powered tools that grow businesses. Next.js, Supabase, custom AI integrations. Based in Fort Worth, TX.',
+    'Lakey Studio builds web applications and AI-powered tools that grow businesses. Next.js, Supabase, custom AI integrations. Based in Dallas, TX.',
   openGraph: {
     title: 'Lakey Studio — Web Development & AI',
     description:

@@ -83,7 +83,7 @@ export default function Contact() {
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               {[
-                { label: 'Location', val: 'Fort Worth, TX — available remotely' },
+                { label: 'Location', val: 'Dallas, TX — available remotely' },
                 { label: 'Response time', val: 'Within 1 business day' },
                 { label: 'Availability', val: 'Taking projects now — 2 slots open' },
               ].map((item) => (

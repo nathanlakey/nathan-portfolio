@@ -10,12 +10,7 @@ export default function Hero() {
       }}
     >
       <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
-        <div style={{
-          display: 'grid', gridTemplateColumns: '1fr 1fr',
-          gap: '6rem', alignItems: 'center',
-        }}
-          className="hero-grid"
-        >
+        <div className="hero-grid">
           {/* Left — headline */}
           <div>
             <div className="anim-1" style={{

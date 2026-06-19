@@ -21,10 +21,10 @@ const projects = [
   },
   {
     id: 'socialposts',
-    category: 'AI · Social Media · SaaS',
+    category: 'AI · Claude API · Next.js',
     name: 'AI Social Post Generator',
-    desc: 'AI-powered tool that generates platform-optimized social media posts in seconds. Paste your content, choose your tone, and get captions ready for Instagram, X, and LinkedIn.',
-    stack: ['Next.js', 'OpenAI', 'Tailwind', 'Vercel'],
+    desc: 'Full-stack AI tool that sends copy to Claude and returns structured, platform-ready posts for Instagram, X, and LinkedIn. Built to learn the AI API pattern end-to-end.',
+    stack: ['Next.js 14', 'Claude API', 'TypeScript', 'Vercel'],
     bgColor: '#f0ede8',
     image: '/projects/SocialPostGenerator.png',
   },

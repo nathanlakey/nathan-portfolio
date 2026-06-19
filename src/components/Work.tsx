@@ -19,6 +19,15 @@ const projects = [
     bgColor: '#ededf0',
     image: '/projects/solongsoulmate.png',
   },
+  {
+    id: 'socialposts',
+    category: 'AI · Social Media · SaaS',
+    name: 'AI Social Post Generator',
+    desc: 'AI-powered tool that generates platform-optimized social media posts in seconds. Paste your content, choose your tone, and get captions ready for Instagram, X, and LinkedIn.',
+    stack: ['Next.js', 'OpenAI', 'Tailwind', 'Vercel'],
+    bgColor: '#f0ede8',
+    image: '/projects/SocialPostGenerator.png',
+  },
 ]
 
 export default function Work() {
@@ -54,7 +63,7 @@ export default function Work() {
         </div>
 
         <div style={{
-          display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem',
+          display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem',
         }} className="work-grid">
           {projects.map((p) => (
             <div

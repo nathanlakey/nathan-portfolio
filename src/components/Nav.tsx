@@ -11,9 +11,20 @@ export default function Nav() {
       background: 'rgba(247,244,239,0.9)', backdropFilter: 'blur(16px)',
       borderBottom: '1px solid var(--border)',
     }}>
-      <span style={{ fontFamily: 'var(--font-serif)', fontSize: '18px', fontWeight: 400, color: 'var(--ink)' }}>
-        <span style={{ color: 'var(--ink)' }}>Lakey</span><span style={{ color: 'var(--gold)' }}>.</span>
-      </span>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <svg width="28" height="28" viewBox="0 0 36 36" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="36" rx="7" fill="#1a1814"/>
+          <text x="18" y="25" textAnchor="middle"
+            fontFamily="Georgia, serif" fontSize="20"
+            fontWeight="400" fill="#f7f4ef">L</text>
+          <circle cx="27" cy="9" r="4" fill="#b8962e"/>
+        </svg>
+        <span style={{ fontFamily: 'var(--font-serif)', fontSize: '18px',
+          fontWeight: 400, color: 'var(--ink)' }}>
+          Lakey<span style={{ color: 'var(--gold)' }}>.</span>
+        </span>
+      </div>
 
       <ul style={{ display: 'flex', gap: '2.5rem', listStyle: 'none' }}>
         {['Work', 'Services', 'Process', 'Contact'].map((item) => (

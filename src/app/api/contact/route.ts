@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(req: NextRequest) {
   const body = await req.json()
-  const { fname, lname, email, service, message } = body
+  const { fname, lname, email, phone, service, message } = body
 
   if (!fname || !email) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
 
   if (!apiKey || !toEmail) {
     // In dev without env vars, just log and return success
-    console.log('Contact form submission:', { fname, lname, email, service, message })
+    console.log('Contact form submission:', { fname, lname, email, phone, service, message })
     return NextResponse.json({ success: true })
   }
 
@@ -33,6 +33,7 @@ export async function POST(req: NextRequest) {
           <h2>New project inquiry</h2>
           <p><strong>Name:</strong> ${fname} ${lname ?? ''}</p>
           <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
           <p><strong>Service:</strong> ${service || 'Not specified'}</p>
           <hr />
           <p><strong>Message:</strong></p>

@@ -1,5 +1,7 @@
 'use client'
 
+import { useState } from 'react'
+
 const projects = [
   {
     id: 'landman',
@@ -8,7 +10,7 @@ const projects = [
     desc: 'Authority site and lead-generation platform for a World Champion Auctioneer. Admin dashboard, real-time listings, auction countdown, and seller consultation flow. A property sold through this platform exceeded $3 million.',
     stack: ['Next.js 14', 'Supabase', 'Clerk', 'Resend', 'Vercel'],
     bgColor: '#eee8dc',
-    image: '/projects/landman-auctions.png',
+    images: ['/projects/landman-auctions.png'],
   },
   {
     id: 'solong',
@@ -17,7 +19,7 @@ const projects = [
     desc: 'Fully monetized content site covering DIY divorce across all 50 states. AdSense and affiliate revenue, structured data, GA4, and Cloudflare CDN.',
     stack: ['Next.js', 'Tailwind', 'AdSense', 'Cloudflare', 'GA4'],
     bgColor: '#ededf0',
-    image: '/projects/solongsoulmate.png',
+    images: ['/projects/solongsoulmate.png'],
   },
   {
     id: 'socialposts',
@@ -26,11 +28,27 @@ const projects = [
     desc: 'Full-stack AI tool that sends copy to Claude and returns structured, platform-ready posts for Instagram, X, and LinkedIn. Built to learn the AI API pattern end-to-end.',
     stack: ['Next.js 14', 'Claude API', 'TypeScript', 'Vercel'],
     bgColor: '#f0ede8',
-    image: '/projects/SocialPostGenerator.png',
+    images: ['/projects/SocialPostGenerator.png'],
+  },
+  {
+    id: 'auction-academy',
+    category: 'EdTech · Auctioneer Licensing · React',
+    name: 'Auction Academy Prep',
+    desc: 'Auctioneer licensing exam prep platform covering TX and TN state requirements. Full practice tests, topic quizzes, flashcards, study games, score history tracking, and an exam countdown timer. Built for aspiring auctioneers preparing for their state licensing exam.',
+    stack: ['Next.js', 'Supabase', 'Tailwind', 'Vercel'],
+    bgColor: '#f0ede8',
+    images: [
+      '/projects/auction-academy1.png.jpg',
+      '/projects/auction-academy2.png.jpg',
+      '/projects/auction-academy3.png.jpg',
+      '/projects/auction-academy4.png.jpg',
+    ],
   },
 ]
 
 export default function Work() {
+  const [activeImages, setActiveImages] = useState<Record<string, number>>({})
+
   return (
     <section id="work" style={{ padding: '110px 2.5rem', background: 'var(--bg)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -65,7 +83,9 @@ export default function Work() {
         <div style={{
           display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem',
         }} className="work-grid">
-          {projects.map((p) => (
+          {projects.map((p) => {
+            const activeIndex = activeImages[p.id] ?? 0
+            return (
             <div
               key={p.id}
               className="reveal"
@@ -84,12 +104,54 @@ export default function Work() {
               }}
             >
               <div style={{
+                position: 'relative',
                 aspectRatio: '16/10', overflow: 'hidden',
                 borderBottom: '1px solid var(--border)',
                 background: p.bgColor,
               }}>
-                <img src={p.image} alt={p.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src={p.images[activeIndex]} alt={p.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                {p.images.length > 1 && activeIndex > 0 && (
+                  <button
+                    onClick={(e) => { e.stopPropagation(); setActiveImages(prev => ({ ...prev, [p.id]: (prev[p.id] ?? 0) - 1 })) }}
+                    style={{
+                      position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)',
+                      background: 'rgba(26,24,20,0.6)', border: 'none', color: '#f7f4ef',
+                      width: '32px', height: '32px', borderRadius: '50%', cursor: 'pointer',
+                      fontSize: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    }}
+                  >
+                    ‹
+                  </button>
+                )}
+                {p.images.length > 1 && activeIndex < p.images.length - 1 && (
+                  <button
+                    onClick={(e) => { e.stopPropagation(); setActiveImages(prev => ({ ...prev, [p.id]: (prev[p.id] ?? 0) + 1 })) }}
+                    style={{
+                      position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)',
+                      background: 'rgba(26,24,20,0.6)', border: 'none', color: '#f7f4ef',
+                      width: '32px', height: '32px', borderRadius: '50%', cursor: 'pointer',
+                      fontSize: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    }}
+                  >
+                    ›
+                  </button>
+                )}
               </div>
+              {p.images.length > 1 && (
+                <div style={{ display: 'flex', justifyContent: 'center', gap: '6px', padding: '10px 0 0' }}>
+                  {p.images.map((_, imgIdx) => (
+                    <span
+                      key={imgIdx}
+                      style={{
+                        width: '4px', height: '4px', borderRadius: '50%',
+                        background: imgIdx === activeIndex ? 'var(--gold)' : 'var(--border)',
+                        border: imgIdx === activeIndex ? 'none' : '1px solid var(--muted)',
+                        display: 'inline-block',
+                      }}
+                    />
+                  ))}
+                </div>
+              )}
               <div style={{ padding: '1.5rem' }}>
                 <div style={{
                   fontFamily: 'var(--font-mono)', fontSize: '10px',
@@ -124,7 +186,8 @@ export default function Work() {
                 </div>
               </div>
             </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

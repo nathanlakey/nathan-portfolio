@@ -104,9 +104,9 @@ export default function Work() {
                       style={{
                         position: 'absolute', left: '12px', top: '50%',
                         transform: 'translateY(-50%)', background: 'none', border: 'none',
-                        color: '#f7f4ef', cursor: 'pointer', fontSize: '22px',
+                        color: '#1a1814', cursor: 'pointer', fontSize: '22px',
                         fontWeight: 300, lineHeight: 1, padding: '4px 8px',
-                        textShadow: '0 1px 4px rgba(0,0,0,0.5)',
+                        textShadow: '0 1px 3px rgba(255,255,255,0.8)',
                       }}
                     >
                       ←
@@ -118,9 +118,9 @@ export default function Work() {
                       style={{
                         position: 'absolute', right: '12px', top: '50%',
                         transform: 'translateY(-50%)', background: 'none', border: 'none',
-                        color: '#f7f4ef', cursor: 'pointer', fontSize: '22px',
+                        color: '#1a1814', cursor: 'pointer', fontSize: '22px',
                         fontWeight: 300, lineHeight: 1, padding: '4px 8px',
-                        textShadow: '0 1px 4px rgba(0,0,0,0.5)',
+                        textShadow: '0 1px 3px rgba(255,255,255,0.8)',
                       }}
                     >
                       →

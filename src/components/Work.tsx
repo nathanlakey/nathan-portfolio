@@ -11,6 +11,7 @@ const projects = [
     stack: ['Next.js 14', 'Supabase', 'Clerk', 'Resend', 'Vercel'],
     bgColor: '#eee8dc',
     images: ['/projects/landman-auctions.png'],
+    url: 'https://www.landmanauctions.com',
   },
   {
     id: 'solong',
@@ -20,6 +21,7 @@ const projects = [
     stack: ['Next.js', 'Tailwind', 'AdSense', 'Cloudflare', 'GA4'],
     bgColor: '#ededf0',
     images: ['/projects/solongsoulmate.png'],
+    url: 'https://www.solongsoulmate.com',
   },
   {
     id: 'socialposts',
@@ -29,6 +31,7 @@ const projects = [
     stack: ['Next.js 14', 'Claude API', 'TypeScript', 'Vercel'],
     bgColor: '#f0ede8',
     images: ['/projects/SocialPostGenerator.png'],
+    url: null,
   },
   {
     id: 'auction-academy',
@@ -43,6 +46,7 @@ const projects = [
       '/projects/auction-academy3.png.jpg',
       '/projects/auction-academy4.png.jpg',
     ],
+    url: 'https://www.auctionacademyprep.com',
   },
 ]
 
@@ -85,6 +89,94 @@ export default function Work() {
         }} className="work-grid">
           {projects.map((p) => {
             const activeIndex = activeImages[p.id] ?? 0
+            const cardContent = (
+              <>
+                <div style={{
+                  position: 'relative',
+                  aspectRatio: '16/10', overflow: 'hidden',
+                  borderBottom: '1px solid var(--border)',
+                  background: p.bgColor,
+                }}>
+                  <img src={p.images[activeIndex]} alt={p.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  {p.images.length > 1 && activeIndex > 0 && (
+                    <button
+                      onClick={(e) => { e.stopPropagation(); e.preventDefault(); setActiveImages(prev => ({ ...prev, [p.id]: (prev[p.id] ?? 0) - 1 })) }}
+                      style={{
+                        position: 'absolute', left: '12px', top: '50%',
+                        transform: 'translateY(-50%)', background: 'none', border: 'none',
+                        color: '#f7f4ef', cursor: 'pointer', fontSize: '22px',
+                        fontWeight: 300, lineHeight: 1, padding: '4px 8px',
+                        textShadow: '0 1px 4px rgba(0,0,0,0.5)',
+                      }}
+                    >
+                      ←
+                    </button>
+                  )}
+                  {p.images.length > 1 && activeIndex < p.images.length - 1 && (
+                    <button
+                      onClick={(e) => { e.stopPropagation(); e.preventDefault(); setActiveImages(prev => ({ ...prev, [p.id]: (prev[p.id] ?? 0) + 1 })) }}
+                      style={{
+                        position: 'absolute', right: '12px', top: '50%',
+                        transform: 'translateY(-50%)', background: 'none', border: 'none',
+                        color: '#f7f4ef', cursor: 'pointer', fontSize: '22px',
+                        fontWeight: 300, lineHeight: 1, padding: '4px 8px',
+                        textShadow: '0 1px 4px rgba(0,0,0,0.5)',
+                      }}
+                    >
+                      →
+                    </button>
+                  )}
+                </div>
+                {p.images.length > 1 && (
+                  <div style={{ display: 'flex', justifyContent: 'center', gap: '6px', padding: '10px 0 0' }}>
+                    {p.images.map((_, imgIdx) => (
+                      <span
+                        key={imgIdx}
+                        style={{
+                          width: '4px', height: '4px', borderRadius: '50%',
+                          background: imgIdx === activeIndex ? 'var(--gold)' : 'var(--border)',
+                          border: imgIdx === activeIndex ? 'none' : '1px solid var(--muted)',
+                          display: 'inline-block',
+                        }}
+                      />
+                    ))}
+                  </div>
+                )}
+                <div style={{ padding: '1.5rem' }}>
+                  <div style={{
+                    fontFamily: 'var(--font-mono)', fontSize: '10px',
+                    color: 'var(--muted)', letterSpacing: '0.08em',
+                    textTransform: 'uppercase', marginBottom: '6px',
+                  }}>
+                    {p.category}
+                  </div>
+                  <div style={{
+                    fontFamily: 'var(--font-serif)', fontSize: '1.4rem',
+                    fontWeight: 400, color: 'var(--ink)', marginBottom: '8px',
+                  }}>
+                    {p.name}
+                  </div>
+                  <div style={{
+                    fontSize: '13px', color: 'var(--muted)', lineHeight: 1.65,
+                    fontWeight: 300, marginBottom: '1rem',
+                  }}>
+                    {p.desc}
+                  </div>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px' }}>
+                    {p.stack.map((s) => (
+                      <span key={s} style={{
+                        fontFamily: 'var(--font-mono)', fontSize: '10px',
+                        padding: '3px 8px', border: '1px solid var(--border)',
+                        borderRadius: '3px', color: 'var(--muted)',
+                        background: 'var(--bg)',
+                      }}>
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )
             return (
             <div
               key={p.id}
@@ -103,90 +195,16 @@ export default function Work() {
                 e.currentTarget.style.boxShadow = 'none'
               }}
             >
-              <div style={{
-                position: 'relative',
-                aspectRatio: '16/10', overflow: 'hidden',
-                borderBottom: '1px solid var(--border)',
-                background: p.bgColor,
-              }}>
-                <img src={p.images[activeIndex]} alt={p.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                {p.images.length > 1 && activeIndex > 0 && (
-                  <button
-                    onClick={(e) => { e.stopPropagation(); setActiveImages(prev => ({ ...prev, [p.id]: (prev[p.id] ?? 0) - 1 })) }}
-                    style={{
-                      position: 'absolute', left: '12px', top: '50%',
-                      transform: 'translateY(-50%)', background: 'none', border: 'none',
-                      color: '#f7f4ef', cursor: 'pointer', fontSize: '22px',
-                      fontWeight: 300, lineHeight: 1, padding: '4px 8px',
-                      textShadow: '0 1px 4px rgba(0,0,0,0.5)',
-                    }}
-                  >
-                    ←
-                  </button>
-                )}
-                {p.images.length > 1 && activeIndex < p.images.length - 1 && (
-                  <button
-                    onClick={(e) => { e.stopPropagation(); setActiveImages(prev => ({ ...prev, [p.id]: (prev[p.id] ?? 0) + 1 })) }}
-                    style={{
-                      position: 'absolute', right: '12px', top: '50%',
-                      transform: 'translateY(-50%)', background: 'none', border: 'none',
-                      color: '#f7f4ef', cursor: 'pointer', fontSize: '22px',
-                      fontWeight: 300, lineHeight: 1, padding: '4px 8px',
-                      textShadow: '0 1px 4px rgba(0,0,0,0.5)',
-                    }}
-                  >
-                    →
-                  </button>
-                )}
-              </div>
-              {p.images.length > 1 && (
-                <div style={{ display: 'flex', justifyContent: 'center', gap: '6px', padding: '10px 0 0' }}>
-                  {p.images.map((_, imgIdx) => (
-                    <span
-                      key={imgIdx}
-                      style={{
-                        width: '4px', height: '4px', borderRadius: '50%',
-                        background: imgIdx === activeIndex ? 'var(--gold)' : 'var(--border)',
-                        border: imgIdx === activeIndex ? 'none' : '1px solid var(--muted)',
-                        display: 'inline-block',
-                      }}
-                    />
-                  ))}
-                </div>
+              {p.url ? (
+                <a
+                  href={p.url} target="_blank" rel="noopener noreferrer"
+                  style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
+                >
+                  {cardContent}
+                </a>
+              ) : (
+                cardContent
               )}
-              <div style={{ padding: '1.5rem' }}>
-                <div style={{
-                  fontFamily: 'var(--font-mono)', fontSize: '10px',
-                  color: 'var(--muted)', letterSpacing: '0.08em',
-                  textTransform: 'uppercase', marginBottom: '6px',
-                }}>
-                  {p.category}
-                </div>
-                <div style={{
-                  fontFamily: 'var(--font-serif)', fontSize: '1.4rem',
-                  fontWeight: 400, color: 'var(--ink)', marginBottom: '8px',
-                }}>
-                  {p.name}
-                </div>
-                <div style={{
-                  fontSize: '13px', color: 'var(--muted)', lineHeight: 1.65,
-                  fontWeight: 300, marginBottom: '1rem',
-                }}>
-                  {p.desc}
-                </div>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px' }}>
-                  {p.stack.map((s) => (
-                    <span key={s} style={{
-                      fontFamily: 'var(--font-mono)', fontSize: '10px',
-                      padding: '3px 8px', border: '1px solid var(--border)',
-                      borderRadius: '3px', color: 'var(--muted)',
-                      background: 'var(--bg)',
-                    }}>
-                      {s}
-                    </span>
-                  ))}
-                </div>
-              </div>
             </div>
             )
           })}

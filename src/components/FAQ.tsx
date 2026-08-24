@@ -1,3 +1,5 @@
+'use client'
+
 const faqs = [
   {
     q: "What is the difference between a website and a web app?",

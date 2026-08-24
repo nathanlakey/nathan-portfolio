@@ -26,7 +26,11 @@ const projects = [
     desc: 'Fully monetized content site covering DIY divorce across all 50 states. AdSense and affiliate revenue, structured data, GA4, and Cloudflare CDN.',
     stack: ['Next.js', 'Tailwind', 'AdSense', 'Cloudflare', 'GA4'],
     bgColor: '#ededf0',
-    images: ['/projects/solongsoulmate.png'],
+    images: [
+      '/projects/solongsoulmate1.jpg',
+      '/projects/solongsoulmate2.jpg',
+      '/projects/solongsoulmate3.jpg',
+    ],
     url: 'https://www.solongsoulmate.com',
   },
   {

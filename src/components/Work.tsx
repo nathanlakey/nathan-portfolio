@@ -10,7 +10,13 @@ const projects = [
     desc: 'Authority site and lead-generation platform for a World Champion Auctioneer. Admin dashboard, real-time listings, auction countdown, and seller consultation flow. A property sold through this platform exceeded $3 million.',
     stack: ['Next.js 14', 'Supabase', 'Clerk', 'Resend', 'Vercel'],
     bgColor: '#eee8dc',
-    images: ['/projects/landman-auctions.png'],
+    images: [
+      '/projects/landman-auctions1.jpg',
+      '/projects/landman-auctions2.jpg',
+      '/projects/landman-auctions3.jpg',
+      '/projects/landman-auctions4.jpg',
+      '/projects/landman-auctions5.jpg',
+    ],
     url: 'https://www.landmanauctions.com',
   },
   {

@@ -14,7 +14,7 @@ const projects = [
       '/projects/landman-auctions1.jpg',
       '/projects/landman-auctions2.jpg',
       '/projects/landman-auctions3.jpg',
-      '/projects/landman-auctions4.jpg',
+      '/projects/landman-auctions4.png',
       '/projects/landman-auctions5.jpg',
     ],
     url: 'https://www.landmanauctions.com',

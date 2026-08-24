@@ -60,6 +60,7 @@ export default function FAQ() {
             <div key={i} style={{
               background: 'var(--bg2)', padding: '2rem',
               transition: 'background 0.2s',
+              ...(i === faqs.length - 1 ? { gridColumn: '1 / -1' } : {}),
             }}
             onMouseEnter={e => { e.currentTarget.style.background = 'var(--bg)' }}
             onMouseLeave={e => { e.currentTarget.style.background = 'var(--bg2)' }}

@@ -114,26 +114,28 @@ export default function Work() {
                   <button
                     onClick={(e) => { e.stopPropagation(); setActiveImages(prev => ({ ...prev, [p.id]: (prev[p.id] ?? 0) - 1 })) }}
                     style={{
-                      position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)',
-                      background: 'rgba(26,24,20,0.6)', border: 'none', color: '#f7f4ef',
-                      width: '32px', height: '32px', borderRadius: '50%', cursor: 'pointer',
-                      fontSize: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      position: 'absolute', left: '12px', top: '50%',
+                      transform: 'translateY(-50%)', background: 'none', border: 'none',
+                      color: '#f7f4ef', cursor: 'pointer', fontSize: '22px',
+                      fontWeight: 300, lineHeight: 1, padding: '4px 8px',
+                      textShadow: '0 1px 4px rgba(0,0,0,0.5)',
                     }}
                   >
-                    ‹
+                    ←
                   </button>
                 )}
                 {p.images.length > 1 && activeIndex < p.images.length - 1 && (
                   <button
                     onClick={(e) => { e.stopPropagation(); setActiveImages(prev => ({ ...prev, [p.id]: (prev[p.id] ?? 0) + 1 })) }}
                     style={{
-                      position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)',
-                      background: 'rgba(26,24,20,0.6)', border: 'none', color: '#f7f4ef',
-                      width: '32px', height: '32px', borderRadius: '50%', cursor: 'pointer',
-                      fontSize: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      position: 'absolute', right: '12px', top: '50%',
+                      transform: 'translateY(-50%)', background: 'none', border: 'none',
+                      color: '#f7f4ef', cursor: 'pointer', fontSize: '22px',
+                      fontWeight: 300, lineHeight: 1, padding: '4px 8px',
+                      textShadow: '0 1px 4px rgba(0,0,0,0.5)',
                     }}
                   >
-                    ›
+                    →
                   </button>
                 )}
               </div>

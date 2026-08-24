@@ -30,7 +30,6 @@ const projects = [
       '/projects/solongsoulmate1.jpg',
       '/projects/solongsoulmate2.jpg',
       '/projects/solongsoulmate3.jpg',
-      '/projects/solongsoulmate4.jpg',
       '/projects/solongsoulmate5.jpg',
     ],
     url: 'https://www.solongsoulmate.com',

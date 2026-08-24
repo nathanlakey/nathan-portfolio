@@ -19,7 +19,7 @@ const inputStyle: React.CSSProperties = {
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
   const [form, setForm] = useState({
-    fname: '', lname: '', email: '', service: '', message: '',
+    fname: '', lname: '', email: '', phone: '', service: '', message: '',
   })
 
   const handleChange = (
@@ -133,6 +133,17 @@ export default function Contact() {
               <input
                 type="email" name="email" placeholder="jane@company.com" required
                 value={form.email} onChange={handleChange}
+                style={inputStyle}
+                onFocus={e => { e.target.style.borderColor = 'var(--gold)' }}
+                onBlur={e => { e.target.style.borderColor = 'rgba(247,244,239,0.12)' }}
+              />
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+              <label style={labelStyle}>Phone number</label>
+              <input
+                type="tel" name="phone" placeholder="(555) 555-5555"
+                value={form.phone} onChange={handleChange}
                 style={inputStyle}
                 onFocus={e => { e.target.style.borderColor = 'var(--gold)' }}
                 onBlur={e => { e.target.style.borderColor = 'rgba(247,244,239,0.12)' }}

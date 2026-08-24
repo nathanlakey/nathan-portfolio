@@ -27,7 +27,7 @@ export default function Nav() {
       </div>
 
       <ul style={{ display: 'flex', gap: '2.5rem', listStyle: 'none' }}>
-        {['Work', 'Services', 'Process', 'Contact'].map((item) => (
+        {['Work', 'Services', 'Process', 'FAQ', 'Contact'].map((item) => (
           <li key={item} className="hidden md:block">
             <a
               href={`#${item.toLowerCase()}`}

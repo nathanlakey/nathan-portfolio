@@ -180,6 +180,16 @@ export default function Contact() {
               />
             </div>
 
+            <p style={{
+              fontSize: '13px', color: 'rgba(247,244,239,0.4)',
+              fontWeight: 300, marginBottom: '0.5rem',
+            }}>
+              Not sure which service fits?{' '}
+              <a href="#faq" style={{ color: 'var(--gold)', textDecoration: 'none' }}>
+                See the FAQ ↑
+              </a>
+            </p>
+
             <button
               type="submit"
               disabled={status === 'sending' || status === 'sent'}

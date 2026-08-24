@@ -92,6 +92,14 @@ export default function Services() {
             }}>
               50% at kickoff. 50% at delivery. No retainers required until you want one.
             </p>
+            <p style={{
+              fontSize: '13px', color: 'var(--muted)', lineHeight: 1.8,
+              fontWeight: 300, fontStyle: 'italic',
+            }}>
+              Prices shown are estimates based on typical project scope. Every
+              project is different — reach out and we&apos;ll get an accurate quote
+              after a quick conversation.
+            </p>
           </div>
 
           <div style={{

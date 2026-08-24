@@ -177,7 +177,7 @@ export default function Services() {
                     {s.price}
                     <a href="#pricing-disclaimer" style={{ textDecoration: 'none' }}>
                       <sup style={{
-                        fontSize: '16px', color: 'var(--gold)',
+                        fontSize: '16px', color: 'var(--ink)',
                         cursor: 'pointer', marginLeft: '2px',
                       }}>*</sup>
                     </a>

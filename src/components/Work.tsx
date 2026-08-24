@@ -34,7 +34,7 @@ const projects = [
     id: 'auction-academy',
     category: 'EdTech · Auctioneer Licensing · React',
     name: 'Auction Academy Prep',
-    desc: 'Auctioneer licensing exam prep platform covering TX and TN state requirements. Full practice tests, topic quizzes, flashcards, study games, score history tracking, and an exam countdown timer. Built for aspiring auctioneers preparing for their state licensing exam.',
+    desc: 'Auctioneer licensing exam prep platform covering 8 states and growing. Full practice tests, topic quizzes, flashcards, study games, score history tracking, and an exam countdown timer. Built for aspiring auctioneers preparing for their state licensing exam.',
     stack: ['Next.js', 'Supabase', 'Tailwind', 'Vercel'],
     bgColor: '#f0ede8',
     images: [

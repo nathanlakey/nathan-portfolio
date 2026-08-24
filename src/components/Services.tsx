@@ -89,8 +89,17 @@ export default function Services() {
             </p>
             <p style={{
               fontSize: '14px', color: 'var(--muted)', lineHeight: 1.8, fontWeight: 300,
+              marginBottom: '1.5rem',
             }}>
               50% at kickoff. 50% at delivery. No retainers required until you want one.
+            </p>
+            <p id="pricing-disclaimer" style={{
+              fontSize: '13px', color: 'var(--muted)', lineHeight: 1.8,
+              fontWeight: 300, fontStyle: 'italic', marginTop: '0.5rem',
+            }}>
+              * Prices shown are estimates based on typical project scope. Every
+              project is different — reach out and we&apos;ll get an accurate quote
+              after a quick conversation.
             </p>
           </div>
 
@@ -166,6 +175,12 @@ export default function Services() {
                     whiteSpace: 'pre-line',
                   }}>
                     {s.price}
+                    <a href="#pricing-disclaimer" style={{ textDecoration: 'none' }}>
+                      <sup style={{
+                        fontSize: '16px', color: 'var(--ink)',
+                        cursor: 'pointer', marginLeft: '2px',
+                      }}>*</sup>
+                    </a>
                   </div>
                   <div style={{
                     fontFamily: 'var(--font-mono)', fontSize: '11px',

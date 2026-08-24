@@ -11,6 +11,9 @@ export const metadata: Metadata = {
       'Web apps and AI tools for businesses that take their digital presence seriously.',
     type: 'website',
   },
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({

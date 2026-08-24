@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd \"c:\\\\Users\\\\natha\\\\OneDrive\\\\Desktop\\\\Web Apps\\\\nathan-portfolio\" ; git add src/components/Work\\.tsx ; git commit -m \"Work: replace SVG mockups with screenshots, remove Fretboard Scholar\" ; git push origin main$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

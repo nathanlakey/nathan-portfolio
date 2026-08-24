@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        from: 'Portfolio Contact <onboarding@resend.dev>',
+        from: 'Lakey Studio <nathan@lakeystudio.com>',
         to: [toEmail],
         reply_to: email,
         subject: `New project inquiry from ${fname} ${lname ?? ''}`.trim(),

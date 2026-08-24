@@ -143,7 +143,7 @@ export default function Contact() {
               <label style={labelStyle}>What are you looking to build?</label>
               <select
                 name="service" value={form.service} onChange={handleChange}
-                style={{ ...inputStyle, appearance: 'none' }}
+                style={{ ...inputStyle, appearance: 'none', colorScheme: 'dark', backgroundColor: '#1a1814' }}
                 onFocus={e => { e.target.style.borderColor = 'var(--gold)' }}
                 onBlur={e => { e.target.style.borderColor = 'rgba(247,244,239,0.12)' }}
               >

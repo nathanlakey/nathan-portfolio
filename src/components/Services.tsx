@@ -2,7 +2,6 @@
 
 const services = [
   {
-    num: '01',
     name: 'Website or landing page',
     desc: 'A polished Next.js site that converts visitors into customers, built to load fast, rank well, and look like it costs twice as much.',
     includes: [
@@ -15,7 +14,6 @@ const services = [
     featured: true,
   },
   {
-    num: '02',
     name: 'Web app or internal tool',
     desc: 'Custom dashboards, client portals, admin panels — anything that needs auth, a database, and real logic behind it.',
     includes: [
@@ -28,7 +26,6 @@ const services = [
     featured: false,
   },
   {
-    num: '03',
     name: 'Automation & AI',
     desc: 'Add smart automation to your business — tools that write, respond, organize, and work in the background so you don\'t have to.',
     includes: [
@@ -41,7 +38,6 @@ const services = [
     featured: false,
   },
   {
-    num: '04',
     name: 'Monthly retainer',
     desc: 'Ongoing partnership for updates, new features, and maintenance. Most clients move here after their first project.',
     includes: [
@@ -110,7 +106,7 @@ export default function Services() {
           }}>
             {services.map((s) => (
               <div
-                key={s.num}
+                key={s.name}
                 style={{
                   background: s.featured ? 'rgba(184,150,46,0.12)' : 'var(--bg2)',
                   padding: '2rem 2.5rem',
@@ -130,12 +126,6 @@ export default function Services() {
                 }}
               >
                 <div>
-                  <div style={{
-                    fontFamily: 'var(--font-mono)', fontSize: '10px',
-                    color: 'var(--muted)', marginBottom: '8px', letterSpacing: '0.06em',
-                  }}>
-                    {s.num}
-                  </div>
                   <div style={{
                     fontFamily: 'var(--font-serif)', fontSize: '1.35rem',
                     fontWeight: 400, color: 'var(--ink)', marginBottom: '6px',

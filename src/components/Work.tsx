@@ -35,16 +35,6 @@ const projects = [
     url: 'https://www.solongsoulmate.com',
   },
   {
-    id: 'socialposts',
-    category: 'AI · Claude API · Next.js',
-    name: 'AI Social Post Generator',
-    desc: 'Full-stack AI tool that sends copy to Claude and returns structured, platform-ready posts for Instagram, X, and LinkedIn. Built to learn the AI API pattern end-to-end.',
-    stack: ['Next.js 14', 'Claude API', 'TypeScript', 'Vercel'],
-    bgColor: '#f0ede8',
-    images: ['/projects/SocialPostGenerator.png'],
-    url: null,
-  },
-  {
     id: 'auction-academy',
     category: 'EdTech · Auctioneer Licensing · React',
     name: 'Auction Academy Prep',

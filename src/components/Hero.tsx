@@ -40,8 +40,7 @@ export default function Hero() {
               fontSize: '16px', color: 'var(--ink2)', lineHeight: 1.8,
               fontWeight: 300, marginBottom: '2.5rem', maxWidth: '420px',
             }}>
-              I build web applications and AI-powered tools for businesses that take
-              their digital presence seriously. No agencies, no waiting rooms.
+              I build web applications for small businesses. No agencies, no waiting.
               Just working software.
             </p>
 

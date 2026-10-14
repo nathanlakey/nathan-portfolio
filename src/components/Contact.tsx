@@ -159,9 +159,9 @@ export default function Contact() {
                 onBlur={e => { e.target.style.borderColor = 'rgba(247,244,239,0.12)' }}
               >
                 <option value="">Select a service...</option>
-                <option>Website or landing page ($1,200 – $2,000)</option>
+                <option>Website or landing page ($2,000 – $2,500)</option>
                 <option>Web app or internal tool ($2,500 – $6,500)</option>
-                <option>AI integration ($1,500 – $3,500)</option>
+                <option>AI integration ($2,000 – $3,500)</option>
                 <option>Monthly retainer ($400 – $2,000/mo)</option>
                 <option>Something else — let&apos;s talk</option>
               </select>
